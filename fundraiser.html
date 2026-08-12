@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundraiser - Support Our Father</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Help Shardanand</div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="fundraiser.html" class="active">Fundraiser</a>
+                <a href="reports.html">Medical Reports</a>
+            </nav>
+            <a href="fundraiser.html" class="btn btn-primary">Support Now</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        
+        <div style="text-align: center; margin-top: 60px; margin-bottom: 40px;">
+            <span style="background-color: #E0E7FF; color: #3730A3; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
+                Verified Patient
+            </span>
+            <h1 style="font-size: 2.5rem; margin: 20px 0; color: #111827;">Support His Treatment</h1>
+            <p style="color: #4B5563; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Every contribution brings us one step closer to helping him receive the life-saving treatment he urgently needs. Your compassion and support mean the world to our family.
+            </p>
+        </div>
+
+        <section style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; margin-bottom: 80px;">
+            
+            <!-- QR CODE CARD -->
+            <div style="flex: 1; background-color: #FFFFFF; padding: 40px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); min-width: 300px; max-width: 450px; text-align: center;">
+                <h3 style="margin-bottom: 20px; color: #111827;">Direct Contribution</h3>
+                <div style="background-color: #F9FAFB; padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #E5E7EB;">
+                    <!-- REPLACE 'qr-code.png' with your actual QR code image name -->
+                    <img src="images/qr-code.jpg" alt="Donation QR Code" style="width: 100%; max-width: 250px; border-radius: 8px;">
+                </div>
+                <p style="color: #6B7280; font-size: 0.9rem;">Scan to contribute via UPI or any supported payment app.</p>
+            </div>
+
+            <!-- BANK DETAILS CARD -->
+            <div style="flex: 1; background-color: #FFFFFF; padding: 40px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); min-width: 300px; max-width: 450px;">
+                <h3 style="margin-bottom: 25px; color: #111827;">Bank Transfer Details</h3>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    
+                    <!-- Account Holder -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 1px solid #E5E7EB;">
+                        <div>
+                            <p style="font-size: 0.85rem; color: #6B7280; margin-bottom: 4px;">Account Holder</p>
+                            <p style="font-weight: 500; color: #111827;" id="acc-name">Shardanand Satynarayanlal Das</p>
+                        </div>
+                        <button onclick="copyToClipboard('acc-name')" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;">Copy</button>
+                    </div>
+
+                    <!-- Account Number -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 1px solid #E5E7EB;">
+                        <div>
+                            <p style="font-size: 0.85rem; color: #6B7280; margin-bottom: 4px;">Account Number</p>
+                            <p style="font-weight: 500; color: #111827;" id="acc-num">912010053068591</p>
+                        </div>
+                        <button onclick="copyToClipboard('acc-num')" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;">Copy</button>
+                    </div>
+
+                    <!-- IFSC Code -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 1px solid #E5E7EB;">
+                        <div>
+                            <p style="font-size: 0.85rem; color: #6B7280; margin-bottom: 4px;">IFSC Code</p>
+                            <p style="font-weight: 500; color: #111827;" id="acc-ifsc">UTIB0001117</p>
+                        </div>
+                        <button onclick="copyToClipboard('acc-ifsc')" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;">Copy</button>
+                    </div>
+
+                    <!-- Bank Name -->
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <p style="font-size: 0.85rem; color: #6B7280; margin-bottom: 4px;">Bank Name</p>
+                            <p style="font-weight: 500; color: #111827;">Axis Bank</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Simple JavaScript for the Copy Buttons -->
+    <script>
+        function copyToClipboard(elementId) {
+            var text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Copied: " + text);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
